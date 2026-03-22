@@ -299,11 +299,16 @@ html, body {
     gap: 10px !important;
   }
 
+   .dropdown-menu, .submenu, .nav-dropdown {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
   nav ul {
     display: flex !important;
     flex-wrap: wrap !important; /* Allows links to wrap if they run out of space */
    
-    gap: 15px !important; /* Even spacing between links */
+    gap: 10px !important; /* Even spacing between links */
     padding: 0 !important;
     width: 100% !important;
  
@@ -312,13 +317,13 @@ html, body {
   }
 
   /* 4. Scale down and stack the nav links */
-
-
   nav ul li a, .nav-link {
-    font-size: 13px !important; /* Significantly smaller text for 5 links */
+    font-size: 12px !important; /* Significantly smaller text for 5 links */
     letter-spacing: 1px !important;
     padding: 5px 10px !important;
     text-transform: uppercase;
+  
+    white-space: nowrap !important; /* Prevents text from breaking into 2 lines */
   }
 
   /* 5. Scale down the Contact Link */
@@ -328,6 +333,10 @@ html, body {
     opacity: 1 !important;
     visibility: visible !important;
     position: relative !important; /* Ensures it doesn't float off the page */
+ }
+
+ .contact-link {
+    display: inline-block !important;
   }
 
   /* 6. Fix the Title Size */
