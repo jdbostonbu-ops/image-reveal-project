@@ -237,11 +237,12 @@ const HomeApp = () => {
 
                      ) : (
                         <div style={{ 
-                            height: '100%', 
+                            flex: 1, 
                             display: 'flex', 
                             flexDirection: 'column', 
                             justifyContent: 'center', 
-                            textAlign: 'center' }}>
+                            textAlign: 'center',
+                            paddingBottom: '80px' }}>
                             <h2 style={{ letterSpacing: '4px' }}>GRAZIE</h2>
                             <p style={{ color: '#888' }}>Your inquiry has been received.</p>
                         </div>

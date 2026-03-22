@@ -194,7 +194,8 @@ const BottegaApp = () => {
                         </form>
                        
                     ) : (
-                        <div style={{ height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', textAlign: 'center' }}>
+                        <div style={{ 
+                            height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', textAlign: 'center' }}>
                             <h2 style={{ letterSpacing: '4px' }}>GRAZIE</h2>
                             <p style={{ color: '#888', fontSize: '13px' }}>Your inquiry has been received.</p>
                         </div>
