@@ -131,6 +131,8 @@ const GuccishoesApp = () => {
             const greenChannel = row.querySelector(".rgb-green");
             const finalImg = row.querySelector(".main-image-final");
             const content = row.querySelector(".side-list-container");
+            const items = row.querySelectorAll(".items-col p"); // Add this
+            const prices = row.querySelectorAll(".prices-col p"); // Add this
             const priceTags = row.querySelectorAll(".price-tag");
 
             const tl = gsap.timeline({
@@ -141,6 +143,8 @@ const GuccishoesApp = () => {
                     scrub: 1.5,
                 }
             });
+
+            
 
             // The Prism Reveal (RGB Separation)
             tl.fromTo(redChannel, { x: -40, y: -20, opacity: 0 }, { x: 0, y: 0, opacity: 0.6, duration: 2 }, 0)
@@ -155,6 +159,10 @@ const GuccishoesApp = () => {
                     toggleActions: "play none none reverse"
                 }
             });
+
+            contentTl.to(content, { opacity: 1, y: 0, duration: 1 })
+                .to(items, { opacity: 1, x: 0, duration: 0.8, stagger: 0.1 }, "-=0.5")
+                .to(prices, { opacity: 1, x: 0, duration: 0.8, stagger: 0.1 }, "-=0.8");
 
             contentTl.to(content, { opacity: 1, y: 0, duration: 1 })
                      .fromTo(priceTags, 
