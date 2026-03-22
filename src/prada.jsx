@@ -149,7 +149,7 @@ const PradaApp = () => {
                 
                 {projectData.map((project, i) => (
                     <div key={i} className="row-wrapper" style={{ 
-                        width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '400px', paddingTop: i === 0 ? '150px' : '0' 
+                        width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '400px', paddingTop: i === 0 ? '250px' : '0' 
                     }}>
                         <div style={{ width: '100%', maxWidth: '1100px', padding: '0 20px' }}>
                             
