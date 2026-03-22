@@ -147,7 +147,7 @@ gsap.registerPlugin(ScrollTrigger);
                 {projectData.map((project, i) => (
                     <div key={i} className="row-wrapper" style={{ 
                         marginBottom: '400px', 
-                        paddingTop: i === 0 ? '150px' : '0',
+                        paddingTop: i === 0 ? '250px' : '0',
                         display: 'flex', flexDirection: 'column', alignItems: 'center'
                     }}>
                         <div style={{ width: '100%', maxWidth: '1100px', padding: '0 20px' }}>
