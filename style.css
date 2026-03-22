@@ -196,8 +196,15 @@ nav ul, .navbar-container {
 }
 
 .hero-title h1{
-  margin-top: 250px !important;
+ 
   font-size: 40px !important;
+  width: 100% !important;
+  
+  text-align: center !important;
+
+  position: absolute !important;
+  top: 400px !important; /* Move it down from the top manually */
+  transform: none !important; /* Remove any centering transforms that fight the position */
 }
 
 nav ul li a, .nav-links {
@@ -226,13 +233,17 @@ nav ul li a, .nav-links {
     align-items: center;
     font-size: 14px !important;
     flex-direction: column;
-
-  }
+    display: block !important; 
+  
+    width: 100%;
+    text-align: left; /* Keeps text on the left but spans the screen */
+}
 
   .img-container {
     display: flex; /* ensures flexbox is active */
     flex-direction: column;
     align-items: center;
-    
+    display: block !important;
+    width: 100%;
   }
 }
