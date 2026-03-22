@@ -161,7 +161,7 @@ const GuccishoesApp = () => {
                 }
             });
 
-            contentTl.to(content, { opacity: 1, y: 0, duration: 1 })
+            contentTl.to(row.querySelector("h3"), { opacity: 1, y: 0, duration: 1 })
                 .to(items, { opacity: 1, x: 0, duration: 0.8, stagger: 0.1 }, "-=0.5")
                 .to(prices, { opacity: 1, x: 0, duration: 0.8, stagger: 0.1 }, "-=0.8");
 
