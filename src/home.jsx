@@ -167,15 +167,65 @@ const HomeApp = () => {
                 </footer>
 
                 {/* CONTACT PANEL */}
-                <div ref={contactPanelRef} style={{ position: 'fixed', top: 0, right: 0, width: '400px', height: '100vh', backgroundColor: '#0a0a0a', zIndex: 10000, padding: '80px 40px', borderLeft: '1px solid #222', transform: 'translateX(100%)', visibility: 'hidden' }}>
-                    <div onClick={() => setIsContactOpen(false)} style={{ position: 'absolute', right: '100%', top: '50%', transform: 'translateY(-50%)', backgroundColor: '#0a0a0a', border: '1px solid #222', borderRight: 'none', padding: '25px 12px', cursor: 'pointer', writingMode: 'vertical-rl', fontSize: '12px', letterSpacing: '3px', color: '#fff', textTransform: 'uppercase' }}>CLOSE [✕]</div>
+                <div ref={contactPanelRef} style={{ 
+                    position: 'fixed', 
+                    top: 0, 
+                    right: 0, 
+                    width: '400px', 
+                    height: '100vh', 
+                    backgroundColor: '#0a0a0a', 
+                    zIndex: 10000, 
+                    padding: '80px 40px', 
+                    borderLeft: '1px solid #222', 
+                    transform: 'translateX(100%)', 
+                    visibility: 'hidden' }}>
+
+                    <div onClick={() => setIsContactOpen(false)} style={{ 
+                        position: 'absolute', 
+                        right: '100%', 
+                        top: '50%', 
+                        transform: 'translateY(-50%)', 
+                        backgroundColor: '#0a0a0a', 
+                        border: '1px solid #222', 
+                        borderRight: 'none', 
+                        padding: '25px 12px', 
+                        cursor: 'pointer', 
+                        writingMode: 'vertical-rl', 
+                        fontSize: '12px', 
+                        letterSpacing: '3px', 
+                        color: '#fff', 
+                        textTransform: 'uppercase' }}>CLOSE [✕]</div>
+
                     <div style={{ marginBottom: '60px' }}>
-                        <h2 style={{ fontSize: '24px', letterSpacing: '4px', marginBottom: '40px', fontFamily: 'RobotoBold' }}>AURELIA ATELIER</h2>
-                        <p style={{ color: '#666', fontSize: '11px', marginBottom: '5px' }}>ADDRESS</p>
-                        <p style={{ fontSize: '14px', marginBottom: '25px', fontFamily: 'RobotoThin' }}>123 Via Montenapoleone, New York, NY, 07086</p>
-                        <p style={{ color: '#666', fontSize: '11px', marginBottom: '5px' }}>PHONE</p>
-                        <p style={{ fontSize: '14px', marginBottom: '40px', fontFamily: 'RobotoThin' }}>+1 860 234 5678</p>
-                        <hr style={{ borderColor: '#222', borderTop: 'none' }} />
+                        <h2 style={{ 
+                            fontSize: '24px', 
+                            letterSpacing: '4px', 
+                            marginBottom: '40px', 
+                            fontFamily: 'RobotoBold' }}>AURELIA ATELIER</h2>
+
+                        <p style={{ 
+                            color: '#666', 
+                            fontSize: '11px', 
+                            marginBottom: '5px' }}>ADDRESS</p>
+
+                        <p style={{ 
+                            fontSize: '14px', 
+                            marginBottom: '25px', 
+                            fontFamily: 'RobotoThin' }}>123 Via Montenapoleone, New York, NY, 07086</p>
+
+                        <p style={{ 
+                            color: '#666', 
+                            fontSize: '11px', 
+                            marginBottom: '5px' }}>PHONE</p>
+
+                        <p style={{ 
+                            fontSize: '14px', 
+                            marginBottom: '40px', 
+                            fontFamily: 'RobotoThin' }}>+1 860 234 5678</p>
+
+                        <hr style={{ 
+                            borderColor: '#222', 
+                            borderTop: 'none' }} />
                     </div>
                     {!isSubmitted ? (
                         <form onSubmit={(e) => { e.preventDefault(); setIsSubmitted(true); }}>
@@ -184,7 +234,13 @@ const HomeApp = () => {
                             <textarea placeholder="MESSAGE" required style={{ ...inputStyle, height: '100px' }} />
                             <button type="submit" style={{ background: '#fff', color: '#000', border: 'none', padding: '15px', width: '100%', fontWeight: 'bold', cursor: 'pointer' }}>SEND</button>
                         </form>
-                    ) : (<h3>MESSAGE SENT</h3>)}
+
+                     ) : (
+                        <div style={{ height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', textAlign: 'center' }}>
+                            <h2 style={{ letterSpacing: '4px' }}>GRAZIE</h2>
+                            <p style={{ color: '#888', fontSize: '13px' }}>Your inquiry has been received.</p>
+                        </div>
+                     )}
                 </div>
             </div>
         </ReactLenis>
