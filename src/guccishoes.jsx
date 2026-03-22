@@ -209,7 +209,7 @@ const GuccishoesApp = () => {
                                     <div className="prices-col" style={{ textAlign: 'right', flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
                                         {project.prices.map((price, idx) => (
                                             <div key={idx} className="price-tag" style={{ 
-                                                fontSize: '18px', lineHeight: '1.4', margin: '12px 0', fontWeight: '500', display: 'block', width: 'fit-content',
+                                                fontSize: '18px', lineHeight: '1.0', margin: '12px 0', fontWeight: '500', display: 'block', width: 'fit-content',
                                                 color: '#fff'
                                             }}>
                                                 {price}
