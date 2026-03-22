@@ -302,6 +302,9 @@ html, body {
    .dropdown-menu, .submenu, .nav-dropdown {
     display: none !important;
     visibility: hidden !important;
+  
+    opacity: 0 !important;
+    position: relative !important; /* Stops them from floating over content */
   }
 
   nav ul {
@@ -313,7 +316,10 @@ html, body {
     width: 100% !important;
  
     margin-right: 0 !important;
+
     justify-content: center !important;
+    
+    gap: 8px !important;
   }
 
   /* 4. Scale down and stack the nav links */
