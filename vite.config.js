@@ -1,13 +1,13 @@
- import { fileURLToPath } from 'node:url'
+import { fileURLToPath } from 'node:url'
 import { dirname, resolve } from 'node:path'
 import { defineConfig, transformWithEsbuild } from 'vite'
 import react from '@vitejs/plugin-react'
-
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
 export default defineConfig({
+  base: '/image-reveal-project/',
   resolve: {
     alias: {
       'react': resolve(__dirname, 'node_modules/react'),
@@ -28,11 +28,11 @@ export default defineConfig({
     },
   ],
   optimizeDeps: {
-    rolldownOptions: {
-      moduleTypes: {
-        '.js': 'jsx'
-      }
-    }
+    esbuildOptions: {
+      loader: {
+        '.js': 'jsx',
+      },
+    },
   },
   build: {
     rollupOptions: {

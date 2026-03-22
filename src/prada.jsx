@@ -203,7 +203,7 @@ const PradaApp = () => {
                         <>
                             <h2 style={{ color: '#fff', fontSize: '24px', letterSpacing: '4px', marginBottom: '40px' }}>AURELIA ATELIER</h2>
                             <p style={{ color: '#666', fontSize: '10px' }}>ADDRESS</p>
-                            <p style={{ color: '#fff', fontSize: '14px', marginBottom: '20px' }}>123 Via Montenapoleone, New York, New York, 07086</p>
+                            <p style={{ color: '#fff', fontSize: '14px', marginBottom: '20px' }}>123 Via Montenapoleone, New York, NY, 07086</p>
                             <p style={{ color: '#666', fontSize: '10px' }}>PHONE</p>
                             <p style={{ color: '#fff', fontSize: '14px', marginBottom: '40px' }}>+1 860 234 5678</p>
                             

@@ -203,15 +203,14 @@ const GuccishoesApp = () => {
                                 <h3 style={{ fontSize: '42px', borderBottom: '1px solid #333', paddingBottom: '15px', textTransform: 'uppercase', letterSpacing: '3px' }}>{project.title}</h3>
                                 <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '25px' }}>
                                     <div className="items-col" style={{ flex: 2 }}>
-                                        {project.items.map((item, idx) => <p key={idx} style={{ fontSize: '18px', color: '#ccc', margin: '12px 0' }}>{item}</p>)}
+                                        {project.items.map((item, idx) => <p key={idx} style={{ fontSize: '18px', color: '#fff', margin: '12px 0', lineHeight: '1.4' }}>{item}</p>)}
                                     </div>
                                     
                                     <div className="prices-col" style={{ textAlign: 'right', flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
                                         {project.prices.map((price, idx) => (
                                             <div key={idx} className="price-tag" style={{ 
-                                                fontSize: '18px', margin: '12px 0', fontWeight: '500', display: 'block', width: 'fit-content',
-                                                backgroundImage: 'linear-gradient(90deg, #888 0%, #fff 50%, #888 100%)',
-                                                backgroundSize: '200% auto', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
+                                                fontSize: '18px', lineHeight: '1.4', margin: '12px 0', fontWeight: '500', display: 'block', width: 'fit-content',
+                                                color: '#fff'
                                             }}>
                                                 {price}
                                             </div>
