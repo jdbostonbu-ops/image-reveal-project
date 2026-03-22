@@ -275,6 +275,13 @@ html, body {
     padding: 0px !important;
   }
 
+    .contact-link {
+    font-size: 12px !important;
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
   /* 2. Scale down the general content further */
   .side-list-container h3 {
     font-size: 16px !important; /* Smaller title for mobile */
