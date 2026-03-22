@@ -162,8 +162,8 @@ ul {
 
 /******************************/
 
-/* Testing mobile compatibility * /
-/ *This centers the entire project block on all screens */
+/* Testing mobile compatibility */
+/* This centers the entire project block on all screens */
 .row-wrapper {
   width: 100% !important;
   display: flex !important;
@@ -189,23 +189,22 @@ nav ul, .navbar-container {
   display: flex; /* ensures flexbox is active */
   flex-direction: row !important; /* stacks links horizontally */
   flex-wrap: wrap !important; /* allows links to jump to a new line if space runs out */
-  align-items: center !important;
+  
   gap: 10px !important;
-  padding: 80px !important;
+  padding: 10px !important;
 
 }
 
 .hero-title h1{
-  padding-top: 150px !important;
+  padding-top: 250px !important;
   font-size: 40px !important;
 }
 
 nav ul li a, .nav-links {
-  font-size: 15px !important;
+  font-size: 12px !important;
   letter-spacing: 1px !important;
   padding: 0px !important;
   list-style: none !important;
-  justify-content: space-between !important;
 }
 
 
@@ -222,6 +221,10 @@ nav ul li a, .nav-links {
     line-height: 1.4 !important;
     margin: 8px 0 !important; /* Tighter vertical spacing for mobile */
   }
+
+  .info p {
+    align-items: center;
+    display: flex; /* ensures flexbox is active */
+    flex-direction: row;
+  }
 }
-
-
