@@ -199,33 +199,17 @@ const GuccishoesApp = () => {
                             </div>
 
                             {/* TEXT CONTENT */}
-                           <div className="side-list-container" style={{ opacity: 0, transform: 'translateY(40px)', marginTop: '40px' }}>
-                                <h3 style={{ fontSize: '42px', borderBottom: '1px solid #333', paddingBottom: '15px', textTransform: 'uppercase', letterSpacing: '3px' }}>{project.title}</h3>
-                                
-                                <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '25px' }}>
-                                    {/* ITEMS COLUMN */}
+                              <div className="side-list-container" style={{ marginTop: '40px' }}>
+                                <h3 style={{ fontSize: '42px', borderBottom: '1px solid #333', paddingBottom: '20px', textTransform: 'uppercase', opacity: 0, transform: 'translateY(20px)' }}>{project.title}</h3>
+                                <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '30px', overflow: 'hidden' }}>
                                     <div className="items-col" style={{ flex: 2 }}>
                                         {project.items.map((item, idx) => (
-                                            <p key={idx} style={{ fontSize: '18px', color: '#fff', margin: '12px 0', lineHeight: '1.4' }}>
-                                                {item}
-                                            </p>
+                                            <p key={idx} style={{ fontSize: '19px', margin: '12px 0', opacity: 0, transform: 'translateX(-60px)' }}>{item}</p>
                                         ))}
                                     </div>
-                                    
-                                    {/* PRICES COLUMN */}
-                                    <div className="prices-col" style={{ textAlign: 'right', flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
+                                    <div className="prices-col" style={{ textAlign: 'right', flex: 1 }}>
                                         {project.prices.map((price, idx) => (
-                                            <p key={idx} className="price-tag" style={{ 
-                                                fontSize: '18px', 
-                                                lineHeight: '1.4', 
-                                                margin: '12px 0', 
-                                                fontWeight: '500', 
-                                                display: 'block', 
-                                                width: 'fit-content',
-                                                color: '#fff'
-                                            }}>
-                                                {price}
-                                            </p>
+                                            <p key={idx} style={{ fontSize: '19px', color: '#888', margin: '12px 0', opacity: 0, transform: 'translateX(60px)' }}>{price}</p>
                                         ))}
                                     </div>
                                 </div>
