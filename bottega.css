@@ -277,12 +277,6 @@ nav ul li a, .nav-links {
   padding: 0px !important;
 }
 
-    .contact-link {
-    font-size: 11px !important;
-    display: inline-block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
 
   /* 2. Scale down the general content further */
   .side-list-container h3 {
