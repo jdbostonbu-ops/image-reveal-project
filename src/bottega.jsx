@@ -81,7 +81,7 @@ const BottegaApp = () => {
     // 3. FIXED SLIDE-OUT (Prevents peeking on load)
     useGSAP(() => {
         gsap.to(contactPanelRef.current, {
-            transform: 'translateX(calc(100% + 50px))',
+            x: isContactOpen ? 0 : "calc(100% + 50px)",
             autoAlpha: isContactOpen ? 1 : 0, // Handles visibility: hidden automatically
             duration: 0.8,
             ease: "expo.inOut"
