@@ -51,13 +51,14 @@ const BottegaApp = () => {
     const [isContactOpen, setIsContactOpen] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
     const contactPanelRef = useRef(null);
+    const isFirstRun = useRef(true);
 
     // 1. LISTEN FOR YOUR HTML LINK EVENT
-    useEffect(() => {
-        const handleToggle = () => setIsContactOpen(true);
-        window.addEventListener('toggleContact', handleToggle);
-        return () => window.removeEventListener('toggleContact', handleToggle);
-    }, []);
+     useEffect(() => {
+            const handleToggle = () => { setIsSubmitted(false); setIsContactOpen(true); };
+            window.addEventListener('toggleContact', handleToggle);
+            return () => window.removeEventListener('toggleContact', handleToggle);
+        }, []);
 
     // 2. LUXURY DISSOLVE
     useGSAP(() => {
@@ -79,6 +80,13 @@ const BottegaApp = () => {
     }, []);
 
     // 3. FIXED SLIDE-OUT (Prevents peeking on load)
+    useGSAP(() => {
+            if (isFirstRun.current) {
+                gsap.set(contactPanelRef.current, { x: "100%", autoAlpha: 0 });
+                isFirstRun.current = false;
+                return;
+            }
+            
     useGSAP(() => {
         gsap.to(contactPanelRef.current, {
             x: isContactOpen ? 0 : "100%",
@@ -178,7 +186,7 @@ const BottegaApp = () => {
                             borderColor: '#222', 
                             borderTop: 'none' }} />
                     </div>
-                    
+
                     {!isSubmitted ? (
                         <form onSubmit={(e) => { e.preventDefault(); setIsSubmitted(true); }}>
                             <input placeholder="NAME" required style={inputStyle} />

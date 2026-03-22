@@ -215,16 +215,34 @@ const BottegapursesApp = () => {
                 <div 
                     ref={contactPanelRef} 
                     style={{ 
-                        position: 'fixed', top: 0, right: 0, width: '400px', height: '100vh', 
-                        backgroundColor: '#0a0a0a', borderLeft: '1px solid #222', zIndex: 9999, 
-                        transform: 'translateX(100%)', visibility: 'hidden', padding: '80px 40px' 
+                        position: 'fixed', 
+                        top: 0, 
+                        right: 0, 
+                        width: '400px', 
+                        height: '100vh', 
+                        backgroundColor: '#0a0a0a', 
+                        borderLeft: '1px solid #222', 
+                        zIndex: 9999, 
+                        transform: 'translateX(100%)', 
+                        visibility: 'hidden', 
+                        padding: '80px 40px' 
                     }}
                 >
                     <div onClick={() => setIsContactOpen(false)} style={{ 
-                        position: 'absolute', left: '-35px', top: '50%', transform: 'translateY(-50%)',
-                        backgroundColor: '#111', color: '#fff', padding: '20px 8px', writingMode: 'vertical-rl',
-                        cursor: 'pointer', border: '1px solid #222', borderRight: 'none', fontSize: '11px',
-                        letterSpacing: '2px', textTransform: 'uppercase'
+                        position: 'absolute', 
+                        left: '-35px', 
+                        top: '50%', 
+                        transform: 'translateY(-50%)',
+                        backgroundColor: '#111', 
+                        color: '#fff', 
+                        padding: '20px 8px', 
+                        writingMode: 'vertical-rl',
+                        cursor: 'pointer', 
+                        border: '1px solid #222', 
+                        borderRight: 'none', 
+                        fontSize: '11px',
+                        letterSpacing: '2px', 
+                        textTransform: 'uppercase'
                     }}>
                         CLOSE [✕]
                     </div>
@@ -247,7 +265,12 @@ const BottegapursesApp = () => {
                             </form>
                         </>
                     ) : (
-                        <div style={{ height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', textAlign: 'center' }}>
+                        <div style={{ 
+                            height: '100%', 
+                            display: 'flex', 
+                            flexDirection: 'column', 
+                            justifyContent: 'center', 
+                            textAlign: 'center' }}>
                             <h2 style={{ letterSpacing: '4px' }}>GRAZIE</h2>
                             <p style={{ color: '#888' }}>Your inquiry has been received.</p>
                         </div>
