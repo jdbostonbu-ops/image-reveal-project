@@ -55,6 +55,7 @@ gsap.registerPlugin(ScrollTrigger);
     const [isContactOpen, setIsContactOpen] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
     const contactPanelRef = useRef(null);
+    const isFirstRun = useRef(true);
 
     const uiColor = "#F5F5F7"; // Bone White
 
@@ -120,13 +121,18 @@ gsap.registerPlugin(ScrollTrigger);
 
     // 4. CONTACT PANEL SLIDE-OUT ANIMATION
     useGSAP(() => {
-        gsap.to(contactPanelRef.current, {
-            x: isContactOpen ? 0 : "100%",
-            autoAlpha: isContactOpen ? 1 : 0,
-            duration: 0.8,
-            ease: "expo.inOut"
-        });
-    }, [isContactOpen]);
+              if (isFirstRun.current) {
+                  gsap.set(contactPanelRef.current, { x: "100%", autoAlpha: 0 });
+                  isFirstRun.current = false;
+                  return;
+              }
+              gsap.to(contactPanelRef.current, {
+                  x: isContactOpen ? 0 : "100%",
+                  autoAlpha: isContactOpen ? 1 : 0,
+                  duration: 0.8,
+                  ease: "expo.inOut"
+              });
+          }, [isContactOpen]);
 
     const inputStyle = { 
         background: 'transparent', border: 'none', borderBottom: '1px solid #333', 
@@ -236,7 +242,13 @@ gsap.registerPlugin(ScrollTrigger);
                             </form>
                         </>
                     ) : (
-                        <div style={{ height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', textAlign: 'center' }}>
+                        <div style={{ 
+                            flex: 1, 
+                            display: 'flex', 
+                            flexDirection: 'column', 
+                            justifyContent: 'center', 
+                            textAlign: 'center',
+                            paddingBottom: '80px'}}>
                             <h2 style={{ letterSpacing: '4px' }}>GRAZIE</h2>
                             <p style={{ color: '#888' }}>Your inquiry has been received.</p>
                         </div>

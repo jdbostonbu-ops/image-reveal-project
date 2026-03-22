@@ -103,6 +103,7 @@ const FendiApp = () => {
     const [isContactOpen, setIsContactOpen] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
     const contactPanelRef = useRef(null);
+    const isFirstRun = useRef(true);
 
     const uiColor = "#F5F5F7"; 
     const fendiYellow = "#F9B100"; // ICONIC FENDI ROMA YELLOW
@@ -169,13 +170,18 @@ const FendiApp = () => {
 
     // 4. CONTACT PANEL SLIDE-OUT ANIMATION
     useGSAP(() => {
-        gsap.to(contactPanelRef.current, {
-            x: isContactOpen ? 0 : "100%",
-            autoAlpha: isContactOpen ? 1 : 0,
-            duration: 0.8,
-            ease: "expo.inOut"
-        });
-    }, [isContactOpen]);
+                        if (isFirstRun.current) {
+                            gsap.set(contactPanelRef.current, { x: "100%", autoAlpha: 0 });
+                            isFirstRun.current = false;
+                            return;
+                        }
+                        gsap.to(contactPanelRef.current, {
+                            x: isContactOpen ? 0 : "100%",
+                            autoAlpha: isContactOpen ? 1 : 0,
+                            duration: 0.8,
+                            ease: "expo.inOut"
+                        });
+                    }, [isContactOpen]);
 
     const inputStyle = { 
         background: 'transparent', border: 'none', borderBottom: '1px solid #333', 
@@ -232,9 +238,17 @@ const FendiApp = () => {
                 <div 
                     ref={contactPanelRef} 
                     style={{ 
-                        position: 'fixed', top: 0, right: 0, width: '400px', height: '100vh', 
-                        backgroundColor: '#0a0a0a', borderLeft: '1px solid #222', zIndex: 9999, 
-                        transform: 'translateX(100%)', visibility: 'hidden', padding: '80px 40px' 
+                        position: 'fixed', 
+                        top: 0, 
+                        right: 0, 
+                        width: '400px', 
+                        height: '100vh', 
+                        backgroundColor: '#0a0a0a', 
+                        borderLeft: '1px solid #222', 
+                        zIndex: 9999, 
+                        transform: 'translateX(100%)', 
+                        visibility: 'hidden', 
+                        padding: '80px 40px' 
                     }}
                 >
                     {/* CLOSE TAB */}
@@ -265,7 +279,13 @@ const FendiApp = () => {
                             </form>
                         </>
                     ) : (
-                        <div style={{ height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', textAlign: 'center' }}>
+                        <div style={{ 
+                            flex: 1, 
+                            display: 'flex', 
+                            flexDirection: 'column', 
+                            justifyContent: 'center', 
+                            textAlign: 'center',
+                            paddingBottom: '80px'}}>
                             <h2 style={{ letterSpacing: '4px' }}>GRAZIE</h2>
                             <p style={{ color: '#888' }}>Your inquiry has been received.</p>
                         </div>

@@ -109,6 +109,7 @@ const BottegapursesApp = () => {
     const [isContactOpen, setIsContactOpen] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
     const contactPanelRef = useRef(null);
+    const isFirstRun = useRef(true);
     const uiColor = "#F5F5F7"; 
 
     // 1. LISTEN FOR EXTERNAL HTML TOGGLE
@@ -159,13 +160,18 @@ const BottegapursesApp = () => {
 
     // 3. CONTACT PANEL SLIDE-OUT
     useGSAP(() => {
-        gsap.to(contactPanelRef.current, {
-            x: isContactOpen ? 0 : "100%",
-            autoAlpha: isContactOpen ? 1 : 0,
-            duration: 0.8,
-            ease: "expo.inOut"
-        });
-    }, [isContactOpen]);
+           if (isFirstRun.current) {
+               gsap.set(contactPanelRef.current, { x: "100%", autoAlpha: 0 });
+               isFirstRun.current = false;
+               return;
+           }
+           gsap.to(contactPanelRef.current, {
+               x: isContactOpen ? 0 : "100%",
+               autoAlpha: isContactOpen ? 1 : 0,
+               duration: 0.8,
+               ease: "expo.inOut"
+           });
+       }, [isContactOpen]);
 
     const inputStyle = { background: 'transparent', border: 'none', borderBottom: '1px solid #333', color: '#fff', padding: '12px 0', width: '100%', outline: 'none', marginBottom: '20px', fontSize: '13px' };
 
@@ -266,11 +272,12 @@ const BottegapursesApp = () => {
                         </>
                     ) : (
                         <div style={{ 
-                            height: '100%', 
+                            flex: 1, 
                             display: 'flex', 
                             flexDirection: 'column', 
                             justifyContent: 'center', 
-                            textAlign: 'center' }}>
+                            textAlign: 'center',
+                            paddingBottom: '80px'}}>
                             <h2 style={{ letterSpacing: '4px' }}>GRAZIE</h2>
                             <p style={{ color: '#888' }}>Your inquiry has been received.</p>
                         </div>
