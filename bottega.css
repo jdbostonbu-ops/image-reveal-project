@@ -262,21 +262,23 @@ html, body {
 /* MOBILE FIXES (Only triggers on screens smaller than 768px) */
 @media (max-width: 768px) {
   
-   nav ul, .navbar-container {
-    flex-direction: column !important; /* Stacks links vertically if they don't fit */
-    align-items: center !important;
-    gap: 10px !important;
-    padding: 0px !important;
-  }
+nav ul, .navbar-container {
+  display: flex; /* ensures flexbox is active */
+  flex-direction: row !important; /* stacks links horizontally */
+  flex-wrap: wrap !important; /* allows links to jump to a new line if space runs out */
+  align-items: center !important;
+  gap: 10px !important;
+  padding: 0px !important;
+}
 
-  nav ul li a, .nav-link {
-    font-size: 12px !important; /* Significantly smaller text for 5 links */
-    letter-spacing: 1px !important;
-    padding: 0px !important;
-  }
+nav ul li a, .nav-link {
+  font-size: 11px !important;
+  letter-spacing: 1px !important;
+  padding: 0px !important;
+}
 
     .contact-link {
-    font-size: 12px !important;
+    font-size: 11px !important;
     display: inline-block !important;
     visibility: visible !important;
     opacity: 1 !important;
