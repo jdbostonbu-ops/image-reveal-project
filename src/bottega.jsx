@@ -80,21 +80,19 @@ const BottegaApp = () => {
     }, []);
 
     // 3. FIXED SLIDE-OUT (Prevents peeking on load)
-    useGSAP(() => {
-            if (isFirstRun.current) {
-                gsap.set(contactPanelRef.current, { x: "100%", autoAlpha: 0 });
-                isFirstRun.current = false;
-                return;
-            }
-            
-    useGSAP(() => {
-        gsap.to(contactPanelRef.current, {
-            x: isContactOpen ? 0 : "100%",
-            autoAlpha: isContactOpen ? 1 : 0, // Handles visibility: hidden automatically
-            duration: 0.8,
-            ease: "expo.inOut"
-        });
-    }, [isContactOpen]);
+     useGSAP(() => {
+         if (isFirstRun.current) {
+             gsap.set(contactPanelRef.current, { x: "100%", autoAlpha: 0 });
+             isFirstRun.current = false;
+             return;
+         }
+         gsap.to(contactPanelRef.current, {
+             x: isContactOpen ? 0 : "100%",
+             autoAlpha: isContactOpen ? 1 : 0,
+             duration: 0.8,
+             ease: "expo.inOut"
+         });
+     }, [isContactOpen]);
 
     const inputStyle = { background: 'transparent', border: 'none', borderBottom: '1px solid #333', color: '#fff', padding: '12px 0', width: '100%', outline: 'none', marginBottom: '20px', fontSize: '13px' };
 
