@@ -179,7 +179,7 @@ ul {
 }
 
 
-/* MOBILE FIXES (Only triggers on screens smaller than 768px) */
+/* iPad/tablet and MOBILE FIXES (Only triggers on screens smaller than 768px) */
 @media (max-width: 768px) {
   
 nav ul, .navbar-container {
