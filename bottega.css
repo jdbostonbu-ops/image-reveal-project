@@ -241,3 +241,48 @@ html, body {
 .nav-links:focus {
     outline: none;
 }
+
+
+/* Testing mobile compatibility * /
+/ *This centers the entire project block on all screens */
+.row-wrapper {
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+/* This makes sure the inner content doesn't "leak" off the phone screen */
+.row-wrapper > div {
+  width: 90% !important; /* Forces breathing room on left/right */
+  max-width: 1100px;
+  margin: 0 auto !important; /* Centers the content box */
+}
+
+/* MOBILE FIXES (Only triggers on screens smaller than 768px) */
+@media (max-width: 768px) {
+  
+  /* 1. Shrink the image height so it fits the phone screen better */
+  .img-container {
+    height: 40vh !important; 
+    width: 100% !important;
+  }
+
+  /* 2. Prevent the Items and Prices from cutting off at the edges */
+  .side-list-container > div {
+    flex-wrap: wrap !important; 
+    justify-content: space-between !important;
+    gap: 15px;
+  }
+
+  /* 3. Reduce the massive 400px gap so users don't scroll forever */
+  .row-wrapper {
+    margin-bottom: 100px !important; 
+  }
+
+  /* 4. Shrink the title so it doesn't wrap into 3-4 lines */
+  .side-list-container h3 {
+    font-size: 24px !important;
+    letter-spacing: 1px !important;
+  }
+}
