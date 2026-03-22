@@ -113,7 +113,7 @@ const LouisApp = () => {
                 
                 {projectData.map((project, i) => (
                     <div key={i} className="row-wrapper" style={{ 
-                        width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '400px', marginTop: i === 0 ? '150px' : '0' 
+                        width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '400px', marginTop: i === 0 ? '250px' : '0' 
                     }}>
                         <div style={{ width: '100%', maxWidth: '1100px', padding: '0 20px' }}>
                             <div className="img-container" style={{ position: 'relative', width: '100%', height: '700px', overflow: 'hidden', marginBottom: '40px' }}>
