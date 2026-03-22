@@ -174,27 +174,32 @@ const LouisApp = () => {
                             fontSize: '24px', 
                             letterSpacing: '4px', 
                             marginBottom: '40px', 
-                            fontFamily: 'RobotoBold' }}>AURELIA ATELIER</h2>
+                            fontFamily: 'RobotoBold',
+                            color: '#fff' }}>AURELIA ATELIER</h2>
 
                         <p style={{ 
                             color: '#666', 
                             fontSize: '11px', 
-                            marginBottom: '5px' }}>ADDRESS</p>
+                            marginBottom: '5px',
+                            color: '#fff' }}>ADDRESS</p>
 
                         <p style={{ 
                             fontSize: '14px', 
                             marginBottom: '25px', 
-                            fontFamily: 'RobotoThin' }}>123 Via Montenapoleone, New York, NY, 07086</p>
+                            fontFamily: 'RobotoThin',
+                            color: '#fff' }}>123 Via Montenapoleone, New York, NY, 07086</p>
 
                         <p style={{ 
                             color: '#666', 
                             fontSize: '11px', 
-                            marginBottom: '5px' }}>PHONE</p>
+                            marginBottom: '5px',
+                            color: '#fff' }}>PHONE</p>
 
                         <p style={{ 
                             fontSize: '14px', 
                             marginBottom: '40px', 
-                            fontFamily: 'RobotoThin' }}>+1 860 234 5678</p>
+                            fontFamily: 'RobotoThin',
+                            color: '#fff' }}>+1 860 234 5678</p>
 
                         <hr style={{ 
                             borderColor: '#222', 
