@@ -201,7 +201,7 @@ nav ul li a, .nav-links {
   /* 2. Scale down the general content further */
   .side-list-container h3 {
     font-size: 16px !important; /* Smaller title for mobile */
-  }
+  } 
 
 
   .items-col p, 
