@@ -101,7 +101,7 @@ const BottegaApp = () => {
             <div style={{ backgroundColor: '#000', color: '#fff', minHeight: '100vh', overflowX: 'hidden' }}>
                 
                 {projectData.map((project, i) => (
-                    <div key={i} className="row-wrapper" style={{ padding: '200px 0', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                    <div key={i} className="row-wrapper" style={{ paddingTop: i === 0 ? '250px' : '0', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                         <div style={{ width: '100%', maxWidth: '1100px' }}>
                             <div style={{ position: 'relative', height: '700px', display: 'grid', gridTemplateColumns: 'repeat(10, 1fr)', gridTemplateRows: 'repeat(10, 1fr)', backgroundColor: '#050505' }}>
                                 <img src={project.img} style={{ position: 'absolute', width: '100%', height: '100%', objectFit: 'cover' }} alt="" />
