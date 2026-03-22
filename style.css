@@ -162,17 +162,13 @@ ul {
 
 /******************************/
 
-/* Testing mobile compatibility */
-/* This centers the entire project block on all screens */
+/* Testing mobile compatibility * /
+/ *This centers the entire project block on all screens */
 .row-wrapper {
   width: 100% !important;
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
-
-  position: relative;
-  min-height: 100vh;
-  background-color: #000;
 }
 
 /* This makes sure the inner content doesn't "leak" off the phone screen */
@@ -189,26 +185,13 @@ nav ul, .navbar-container {
   display: flex; /* ensures flexbox is active */
   flex-direction: row !important; /* stacks links horizontally */
   flex-wrap: wrap !important; /* allows links to jump to a new line if space runs out */
-  
+  align-items: center !important;
   gap: 10px !important;
-  padding: 10px !important;
-
-}
-
-.hero-title h1{
- 
-  font-size: 40px !important;
-  width: 100% !important;
-  
-  text-align: center !important;
-
-  position: absolute !important;
-  top: 400px !important; /* Move it down from the top manually */
-  transform: none !important; /* Remove any centering transforms that fight the position */
+  padding: 0px !important;
 }
 
 nav ul li a, .nav-links {
-  font-size: 15px !important;
+  font-size: 11px !important;
   letter-spacing: 1px !important;
   padding: 0px !important;
   list-style: none !important;
@@ -227,23 +210,5 @@ nav ul li a, .nav-links {
     font-size: 13px !important; /* Matches both sides */
     line-height: 1.4 !important;
     margin: 8px 0 !important; /* Tighter vertical spacing for mobile */
-  }
-
-  .info p {
-    align-items: center;
-    font-size: 14px !important;
-    flex-direction: column;
-    display: block !important; 
-  
-    width: 100%;
-    text-align: left; /* Keeps text on the left but spans the screen */
-}
-
-  .img-container {
-    display: flex; /* ensures flexbox is active */
-    flex-direction: column;
-    align-items: center;
-    display: block !important;
-    width: 100%;
   }
 }
