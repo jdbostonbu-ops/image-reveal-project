@@ -8,8 +8,6 @@ import { useGSAP } from "@gsap/react";
 import { useLocation } from 'react-router-dom';
 
 
-
-
 // 1. IMAGE IMPORTS
 import img96 from "./img96.jpg"; import img97 from "./img97.jpg"; import img98 from "./img98.jpg";
 import img99 from "./img99.jpg"; import img100 from "./img100.jpg"; import img101 from "./img101.jpg";
@@ -84,10 +82,10 @@ const BottegaApp = () => {
     // 3. FIXED SLIDE-OUT (Prevents peeking on load)
     useGSAP(() => {
         gsap.to(contactPanelRef.current, {
-            x: isContactOpen ? 0 : "100%", // Moves completely off-screen
             autoAlpha: isContactOpen ? 1 : 0, // Handles visibility: hidden automatically
             duration: 0.8,
-            ease: "expo.inOut"
+            ease: "expo.inOut",
+            x: isContactOpen ? 0 : "calc(100% + 50px)"
         });
     }, [isContactOpen]);
 const inputStyle = { 
@@ -142,10 +140,10 @@ const inputStyle = {
                             backgroundColor: '#0a0a0a', 
                             borderLeft: '1px solid #222', 
                             zIndex: 9999, 
-                            transform: 'translateX(100%)', 
+                            transform: 'translateX(calc(100% + 50px))', 
                             visibility: 'hidden', 
                             padding: '80px 40px',
-                            boxSizing: 'border-box' 
+                            boxSizing: 'border-box'
                         }}
                     >
                         {/* CLOSE TAB */}
@@ -215,3 +213,5 @@ const rootElement = document.getElementById("root");
 if (rootElement) {
     ReactDOM.createRoot(rootElement).render(<BottegaApp />);
 }
+
+
