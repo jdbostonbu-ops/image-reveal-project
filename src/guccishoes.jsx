@@ -130,6 +130,7 @@ const GuccishoesApp = () => {
             const redChannel = row.querySelector(".rgb-red");
             const greenChannel = row.querySelector(".rgb-green");
             const finalImg = row.querySelector(".main-image-final");
+            const title = row.querySelector("h3"); 
             const content = row.querySelector(".side-list-container");
             const items = row.querySelectorAll(".items-col p"); // Add this
             const prices = row.querySelectorAll(".prices-col p"); // Add this
