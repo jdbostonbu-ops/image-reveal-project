@@ -121,7 +121,12 @@ const BottegaApp = () => {
                 <div 
                     ref={contactPanelRef} 
                     style={{ 
-                        position: 'fixed', top: 0, right: 0, width: '400px', height: '100vh', 
+                        position: 'fixed', 
+                        top: 0, 
+                        right: 0, 
+                        // FIX: Use 100% width on mobile, 400px on desktop
+                        width: window.innerWidth < 768 ? '100%' : '400px', 
+                        height: '100vh', 
                         backgroundColor: '#0a0a0a', borderLeft: '1px solid #222', zIndex: 9999, 
                         transform: 'translateX(100%)', // Initial state: 100% off screen
                         visibility: 'hidden', // Fail-safe
