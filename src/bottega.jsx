@@ -72,7 +72,7 @@ const BottegaApp = () => {
             gsap.to(tiles, {
                 opacity: 0, scale: 0.85, duration: 1.5, ease: "power2.inOut",
                 stagger: { grid: [10, 10], from: "random", amount: 1.8 },
-                scrollTrigger: {
+                scrollTrigger: { 
                     trigger: row,
                     start: index === 0 ? "top 95%" : "top 85%",
                     toggleActions: "play none none reverse",
