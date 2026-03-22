@@ -130,7 +130,8 @@ const BottegaApp = () => {
                         backgroundColor: '#0a0a0a', borderLeft: '1px solid #222', zIndex: 9999, 
                         transform: 'translateX(100%)', // Initial state: 100% off screen
                         visibility: 'hidden', // Fail-safe
-                        padding: '80px 40px' 
+                        padding: '80px 40px',
+                        boxSizing: 'border-box' // CRITICAL: keeps padding from pushing width past 100% 
                     }}
                 >
                     {/* CLOSE TAB */}
