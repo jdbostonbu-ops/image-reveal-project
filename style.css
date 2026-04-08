@@ -213,3 +213,8 @@ nav ul li a, .nav-links {
     margin: 8px 0 !important; /* Tighter vertical spacing for mobile */
   }
 }
+
+html, body {
+  overflow-x: hidden;
+  background-color: #000;
+}
