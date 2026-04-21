@@ -56,6 +56,12 @@ This project features a unique collaboration between human design and AI:
 - **Design Tools**: AI-assisted geometry generation
 
 
+## 📨 Serverless Contact Architecture
+The **Aurelia Atelier** contact panel utilizes a modern, serverless approach to handle luxury inquiries:
+- **Asynchronous Data Transmission**: Built with the **Fetch API** using `async/await` patterns to ensure a zero-refresh user experience.
+- **Web3Forms Integration**: A secure, serverless backend bridge that captures boutique inquiries without a dedicated mail server.
+- **Dynamic UI State Logic**: Leverages React `useState` to swap the interface from a functional form to a cinematic "GRAZIE" success state upon confirmation.
+
 ## 🚀 Key Features
 - **Dynamic Reveal**: Images don't just appear; they "unfold" using custom geometric paths.
 - **Luxury Brand Directory**: Comprehensive navigation for high-end Purses, Shoes, and Collections.
