@@ -68,11 +68,11 @@ The **Aurelia Atelier** contact panel utilizes a modern, serverless approach to 
 
 ## 🎓 Lessons Learned
 
-### ⚛️ React vs. Vanilla Logic
+## ⚛️ React vs. Vanilla Logic
 One of the biggest takeaways was the importance of handling form data within the **React Lifecycle**. Transitioning from a standard `document.getElementById` script to a React-specific `onSubmit` handler using `event.currentTarget` taught me how to manage state (`isSubmitted`) alongside asynchronous API calls.
 
-### 🧩 Procedural Geometry
+## 🧩 Procedural Geometry
 Working with AI to scale **CSS Clip-Paths** taught me how to bridge the gap between algorithmic generation and manual UI design. I learned how to "direct" AI to create functional polygon paths that remain performant while providing a luxury, non-standard visual reveal.
 
-### 📦 Asset Optimization
+## 📦 Asset Optimization
 Optimizing the project's visual demos taught me the balance between **high-fidelity visuals and page performance**. By mastering the conversion from `.mov` recordings to optimized `.gif` files, I was able to showcase complex animations without compromising the repository's load time.
