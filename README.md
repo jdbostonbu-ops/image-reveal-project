@@ -47,10 +47,14 @@ This project features a unique collaboration between human design and AI:
 - **React Integration**: A seamless bridge between static HTML navigation and dynamic React components (`home.jsx`).
 
 ## 🛠️ Tech Stack
-- **Frontend**: React (JSX)
+- **Library & Frontend:** React.js (JSX) — Component-based UI architecture.
 - **Styling**: Advanced CSS3 (Clip-Paths and polygon Clip-Path Transitions)
-- **Architecture**: Modular HTML5 entry point with Vite/Module support.
+- **Architecture**: Modular HTML5 entry point with Vite/Module support: Vite (Lightning-fast HMR)
 - **Design Tools**: AI-assisted geometry generation.
+- **Library**: React.js (Component-based UI)
+- **Environment**: Node.js & npm (Dependency Management)
+- **Design Tools**: AI-assisted geometry generation
+
 
 ## 🚀 Key Features
 - **Dynamic Reveal**: Images don't just appear; they "unfold" using custom geometric paths.
