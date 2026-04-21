@@ -227,27 +227,28 @@ const HomeApp = () => {
                             borderColor: '#222', 
                             borderTop: 'none' }} />
                     </div>
-                    {!isSubmitted ? (
+                         {!isSubmitted ? (
                         <form onSubmit={(e) => { e.preventDefault(); setIsSubmitted(true); }}>
                             <input placeholder="NAME" required style={inputStyle} />
                             <input placeholder="EMAIL" type="email" required style={inputStyle} />
                             <textarea placeholder="MESSAGE" required style={{ ...inputStyle, height: '100px' }} />
                             <button type="submit" style={{ background: '#fff', color: '#000', border: 'none', padding: '15px', width: '100%', fontWeight: 'bold', cursor: 'pointer' }}>SEND</button>
                         </form>
-
-                     ) : (
+                       
+                    ) : (
                         <div style={{ 
                             flex: 1, 
                             display: 'flex', 
                             flexDirection: 'column', 
                             justifyContent: 'center', 
                             textAlign: 'center',
-                            paddingBottom: '80px' }}>
+                            paddingBottom: '80px'}}>
                             <h2 style={{ letterSpacing: '4px' }}>GRAZIE</h2>
                             <p style={{ color: '#888' }}>Your inquiry has been received.</p>
                         </div>
-                     )}
+                    )}
                 </div>
+                
             </div>
         </ReactLenis>
     );
