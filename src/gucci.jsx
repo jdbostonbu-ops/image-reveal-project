@@ -244,26 +244,51 @@ const GucciApp = () => {
                             borderTop: 'none' }} />
                     </div>
 
-                    {!isSubmitted ? (
-                        <form onSubmit={(e) => { e.preventDefault(); setIsSubmitted(true); }}>
-                            <input placeholder="NAME" required style={inputStyle} />
-                            <input placeholder="EMAIL" type="email" required style={inputStyle} />
-                            <textarea placeholder="MESSAGE" required style={{ ...inputStyle, height: '100px' }} />
-                            <button type="submit" style={{ background: '#fff', color: '#000', border: 'none', padding: '15px', width: '100%', fontWeight: 'bold', cursor: 'pointer' }}>SEND</button>
-                        </form>
-                       
-                    ) : (
-                        <div style={{ 
-                            flex: 1, 
-                            display: 'flex', 
-                            flexDirection: 'column', 
-                            justifyContent: 'center', 
-                            textAlign: 'center',
-                            paddingBottom: '80px'}}>
-                            <h2 style={{ letterSpacing: '4px' }}>GRAZIE</h2>
-                            <p style={{ color: '#888' }}>Your inquiry has been received.</p>
-                        </div>
-                    )}
+         {!isSubmitted ? (
+    <form 
+        onSubmit={async (e) => { 
+            e.preventDefault(); 
+            
+            // 1. Capture data (MUST have 'name' attributes on inputs below)
+            const formData = new FormData(e.currentTarget);
+            formData.append("access_key", "dd54a250-0a91-4e2d-9a9b-194cc629c447");
+
+            // 2. Send the request
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
+
+            // 3. Only show GRAZIE if it worked
+            if (response.ok) {
+                setIsSubmitted(true); 
+            } else {
+                alert("Submission failed. Please try again.");
+            }
+        }}
+    >
+        {/* IMPORTANT: I added name="name", name="email", and name="message" for Web 3 Forms */}
+        <input name="name" placeholder="NAME" required style={inputStyle} />
+        <input name="email" type="email" placeholder="EMAIL" required style={inputStyle} />
+        <textarea name="message" placeholder="MESSAGE" required style={{ ...inputStyle, height: '100px' }} />
+        
+        <button type="submit" style={{ background: '#fff', color: '#000', border: 'none', padding: '15px', width: '100%', fontWeight: 'bold', cursor: 'pointer' }}>
+            SEND
+        </button>
+    </form>
+) : (
+    <div style={{ 
+        flex: 1, 
+        display: 'flex', 
+        flexDirection: 'column', 
+        justifyContent: 'center', 
+        textAlign: 'center',
+        paddingBottom: '80px'
+    }}>
+        <h2 style={{ letterSpacing: '4px' }}>GRAZIE</h2>
+        <p style={{ color: '#888' }}>Your inquiry has been received.</p>
+    </div>
+)}
                 </div>
             </div>
         </ReactLenis>
