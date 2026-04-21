@@ -9,7 +9,13 @@ An interactive, high-end web experience exploring different clip-paths generated
 | 👩‍💻 | **Jacqueline** | [@jdbostonbu-ops](https://github.com/jdbostonbu-ops) |
 
 ## 🚀 Live Demo
-View the project live here: [https://jdbostonbu-ops.github.io/image-reveal-project/](https://jdbostonbu-ops.github.io/image-reveal-project/)
+[View the project live here:](https://jdbostonbu-ops.github.io/image-reveal-project/)
+
+<div align="center">
+  <img src="Image-Reveal.gif" width="100%" alt="Luxury Image Reveal Demo">
+  <br>
+  <p><em>Demonstrating AI-generated clip-path geometries and seamless polygon transitions.</em></p>
+</div>
 
 
 ## 🌐 Browser & Device Compatibility
