@@ -42,8 +42,7 @@ This project features a unique collaboration between human design and AI:
 
 ## ✨ Project Highlights
 - **Hybrid Animation**: Custom-designed clip-paths expanded by AI for varied image reveal effects.
-- **High-End Aesthetic**: A consistent deep-black theme (`#000`) designed to showcase luxury products like Bottega Veneta and Cartier.
-- **High-End Shutterstock Images**: A seamless bridge between static HTML navigation and dynamic React components (`home.jsx`).
+- **High-End Shutterstock Images**: A seamless bridge between static HTML navigation and dynamic React components (`home.jsx`).  A consistent deep-black theme (`#000`) designed to showcase luxury products like Bottega Veneta and Cartier.
 - **React Integration**: A seamless bridge between static HTML navigation and dynamic React components (`home.jsx`).
 
 ## 🛠️ Tech Stack
